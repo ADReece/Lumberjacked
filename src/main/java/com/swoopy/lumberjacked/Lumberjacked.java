@@ -21,6 +21,17 @@ public final class Lumberjacked extends JavaPlugin {
             Material.CRIMSON_STEM
     );
 
+    public static ImmutableList<Material> LEAVES = ImmutableList.of(
+            Material.ACACIA_LEAVES,
+            Material.BIRCH_LEAVES,
+            Material.JUNGLE_LEAVES,
+            Material.OAK_LEAVES,
+            Material.MANGROVE_LEAVES,
+            Material.SPRUCE_LEAVES,
+            Material.DARK_OAK_LEAVES,
+            Material.CHERRY_LEAVES
+    );
+
     public static final ImmutableList<Material> AXES = ImmutableList.of(
             Material.DIAMOND_AXE,
             Material.GOLDEN_AXE,
