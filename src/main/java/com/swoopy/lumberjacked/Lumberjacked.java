@@ -8,6 +8,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Lumberjacked extends JavaPlugin {
 
+    private static Lumberjacked instance;
+
+    public static Lumberjacked getInstance() {
+        return instance;
+    }
+
     public static final ImmutableList<Material> LOGS = ImmutableList.of(
             Material.ACACIA_LOG,
             Material.BIRCH_LOG,
@@ -43,6 +49,7 @@ public final class Lumberjacked extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        instance = this;
         this.getServer().getPluginManager().registerEvents(new TreeChoppedListener(), this);
         this.getConfig().options().copyDefaults(true);
         this.saveConfig();
@@ -54,6 +61,7 @@ public final class Lumberjacked extends JavaPlugin {
 
     @Override
     public void onDisable() {
+        instance = null;
         // Plugin shutdown logic
     }
 }
